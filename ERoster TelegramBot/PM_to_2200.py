@@ -23,8 +23,6 @@ ddsession = Select(driver.find_element_by_class_name("ddlSession"))
 ddsession.select_by_index(2) #PM
 driver.find_element_by_id("btnSearch").click()
 
-#driver.find_element_by_name("btnFilterTotalCheckedIn").click()
-
 number = driver.find_element_by_name("btnFilterTotalBooked").text
 number = number[13:]
 number = int(number)
@@ -33,17 +31,12 @@ def total_in(c,driver):
     every = driver.find_element_by_xpath("(//*[@name='item.TimeOutTitle'])["+str(c)+"]")
     every.clear()
     every.send_keys("22:00")
-
-
-    
+   
 for i in range(1,number+1):
     
     total_in(i,driver)
     print("Completed: ")
     print(i)
-        
-
-
 
 driver.find_element_by_id("btnSave").click()
 time.sleep(0.5)
@@ -52,19 +45,3 @@ pyautogui.press('enter',1)
 time.sleep(0.5)
 driver.quit()
 print("Task complete")
-
-
-
-
-    
-
-
-
-
-
-#sign in
-#driver.find_element_by_xpath('/html/body/div/div/div[1]/div/div/div[2]/form/div[1]/table/tbody/tr["%s"]/td[2]/p[5]/button[1]' % i).click()
-#driver.switch_to.alert.dismiss()
-#sign in by monthly increment
-#string = f'[id$=btnCI_6453{k}]'
-#driver.find_element_by_css_selector(string).click()
