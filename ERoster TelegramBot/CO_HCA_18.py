@@ -84,17 +84,3 @@ time.sleep(0.5)
 print("Task complete")
 
 
-
-
-    
-
-
-
-
-
-#sign in
-#driver.find_element_by_xpath('/html/body/div/div/div[1]/div/div/div[2]/form/div[1]/table/tbody/tr["%s"]/td[2]/p[5]/button[1]' % i).click()
-#driver.switch_to.alert.dismiss()
-#sign in by monthly increment
-#string = f'[id$=btnCI_6453{k}]'
-#driver.find_element_by_css_selector(string).click()
